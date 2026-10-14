@@ -37,6 +37,12 @@
     .organizers{border-top:1px solid var(--line);padding-top:23px;display:grid;grid-template-columns:1fr 1fr;gap:25px}
     .organizers p{margin:0;color:var(--muted);font-size:14px}
     .organizers strong{display:block;color:var(--wine-dark);font-size:12px;letter-spacing:.12em;margin-bottom:6px}
+    .registration{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:34px;align-items:center;background:var(--cream);border:1px solid var(--line);padding:28px;margin:0 0 32px}
+    .registration h2{font-family:Georgia,"Times New Roman","Songti SC",serif;font-size:29px;line-height:1.25;color:var(--wine-dark);margin:8px 0 10px}
+    .registration p{font-size:14px;color:var(--muted);margin:0 0 17px}
+    .register-button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:9px 19px;background:var(--wine);color:white;font-size:14px}
+    .registration .register-url{display:block;margin-top:10px;font-size:12px;color:var(--wine);overflow-wrap:anywhere}
+    .registration-qr{display:block;width:180px;max-width:100%;height:auto;background:white;border:8px solid white}
     .agenda-day{scroll-margin-top:90px;padding:82px 0 90px}
     .agenda-day.alt{background:var(--cream)}
     .day-heading{display:grid;grid-template-columns:190px 1fr;gap:44px;align-items:start;margin-bottom:42px}
@@ -59,12 +65,18 @@
     .two-up{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
     .two-up .agenda-block{margin-top:0}
     .muted-note{font-size:12px;color:var(--muted);margin:16px 0 0}
+    .poster-section{padding-top:72px;padding-bottom:86px;text-align:center;background:var(--cream)}
+    .poster-section h2{font-family:Georgia,"Times New Roman","Songti SC",serif;font-size:36px;color:var(--wine-dark);margin:0 0 8px}
+    .poster-section p{font-size:13px;color:var(--muted);margin:0 0 25px}
+    .poster-section figure{margin:0 auto;max-width:560px}
+    .poster-section img{display:block;width:100%;height:auto;border:1px solid var(--line);background:white;box-shadow:0 20px 45px rgba(83,55,43,.09)}
+    .poster-section figcaption{font-size:12px;color:var(--muted);margin-top:11px}
     footer{background:#151110;color:rgba(255,255,255,.7);padding:42px 28px}
     .footer-inner{max-width:var(--max);margin:auto;display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:12px}
     .footer-title{color:white;font-family:Georgia,"Times New Roman","Songti SC",serif;font-size:19px}
     .footer-inner a{border-bottom:1px solid rgba(255,255,255,.5)}
     @media(max-width:800px){.day-heading{grid-template-columns:1fr;gap:7px}.organizers,.two-up{grid-template-columns:1fr}}
-    @media(max-width:620px){.nav-wrap{min-height:72px;padding:10px 20px}.brand-logo{width:104px;height:46px}.brand-en{font-size:12px}.brand-zh{font-size:9px}.back-link{font-size:12px}.container{padding-left:20px;padding-right:20px}.event-hero .container{padding-top:61px;padding-bottom:60px}.hero-copy{font-size:15px}.intro{padding-top:58px;padding-bottom:55px}.intro-copy{font-size:16px}.agenda-day{padding:62px 0}.agenda-block{padding:22px}.people-list{grid-template-columns:1fr}.facts{gap:18px}.fact{min-width:125px}.footer-inner{display:block}.footer-inner a{display:inline-block;margin-top:14px}}
+    @media(max-width:620px){.nav-wrap{min-height:72px;padding:10px 20px}.brand-logo{width:104px;height:46px}.brand-en{font-size:12px}.brand-zh{font-size:9px}.back-link{font-size:12px}.container{padding-left:20px;padding-right:20px}.event-hero .container{padding-top:61px;padding-bottom:60px}.hero-copy{font-size:15px}.intro{padding-top:58px;padding-bottom:55px}.intro-copy{font-size:16px}.registration{grid-template-columns:1fr;gap:17px;padding:22px}.registration-qr{width:170px}.agenda-day{padding:62px 0}.agenda-block{padding:22px}.people-list{grid-template-columns:1fr}.facts{gap:18px}.fact{min-width:125px}.poster-section{padding-top:58px;padding-bottom:65px}.footer-inner{display:block}.footer-inner a{display:inline-block;margin-top:14px}}
   </style>
 </head>
 <body>
@@ -96,9 +108,19 @@
 
     <section class="intro container" aria-label="峰会简介">
       <p class="intro-copy">AI正加速重塑法律规则与职业实践。智观科技政策研究院、香港大学 AI &amp; Law Program 与凯易律师事务所（Kirkland &amp; Ellis）于2026年12月5日至6日在香港举办本次峰会。亚太科技法律研究会作为协办方参与活动。</p>
+      <div class="registration" id="register">
+        <div>
+          <div class="block-kicker">Registration / 峰会报名</div>
+          <h2>报名参加峰会</h2>
+          <p>欢迎亲临现场或在线参会，峰会将开通网络直播。请点击报名链接，或使用手机扫描二维码查看报名方式。</p>
+          <a class="register-button" href="https://luma.com/g9xcliun" target="_blank" rel="noopener noreferrer">前往报名 ↗</a>
+          <a class="register-url" href="https://luma.com/g9xcliun" target="_blank" rel="noopener noreferrer">luma.com/g9xcliun</a>
+        </div>
+        <a href="https://luma.com/g9xcliun" target="_blank" rel="noopener noreferrer" aria-label="点击峰会报名二维码打开 Luma 报名页面"><img class="registration-qr" src="assets/summit-registration-qr.jpg" width="1024" height="1024" alt="智观·港大AI法律峰会报名二维码" /></a>
+      </div>
       <div class="organizers">
         <p><strong>合办方</strong>智观科技政策研究院 · 香港大学 AI &amp; Law Program · 凯易律师事务所（Kirkland &amp; Ellis）</p>
-        <p><strong>协办方及支持方</strong>亚太科技法律研究会（协办） · 法盟（支持）</p>
+        <p><strong>协办方及支持方</strong>亚太科技法律研究会（协办） · 法盟、CLECSS（中国法律教育及就业讲座系列）（支持）</p>
       </div>
     </section>
 
@@ -120,7 +142,7 @@
 
         <article class="agenda-block"><div class="block-kicker">Panel 4 / 专题讨论四</div><h3>AI金融法律创新</h3><div class="moderator"><span class="label">主持人</span><strong>陈炜恒</strong>威尔逊律师事务所（Wilson Sonsini）资深合伙人、大中华区主管</div><div class="speaker-label">讨论嘉宾</div><div class="people-list"><div class="person"><strong>王轶</strong><span>蚂蚁国际全球法务总监</span></div><div class="person"><strong>周佳兴</strong><span>中金国际副总裁、总法律顾问</span></div><div class="person"><strong>梅家豪</strong><span>高伟绅律师事务所（Clifford Chance）合伙人</span></div></div></article>
 
-        <article class="agenda-block"><div class="block-kicker">Panel 5 / 专题讨论五</div><h3>AI机器人时代的法律规则</h3><div class="moderator"><span class="label">主持人</span><strong>赵之威</strong>张淑姬赵之威律师行（ELLALAN）创始人及管理合伙人；广东超泓律师事务所合伙人</div><div class="speaker-label">讨论嘉宾</div><div class="people-list"><div class="person"><strong>邓凯</strong><span>智元机器人香港公司总经理、海外公共事务负责人</span></div><div class="person"><strong>郑叶青</strong><span>小鹏集团副总裁、总法律顾问</span></div><div class="person"><strong>陈涵</strong><span>宇树科技国内法务负责人</span></div><div class="person"><strong>邓立山</strong><span>Kimi 月之暗面科技合规部负责人</span></div></div></article>
+        <article class="agenda-block"><div class="block-kicker">Panel 5 / 专题讨论五</div><h3>AI机器人时代的法律规则</h3><div class="moderator"><span class="label">主持人</span><strong>赵之威</strong>张淑姬赵之威律师行（ELLALAN）创始人及管理合伙人；广东超泓律师事务所合伙人</div><div class="speaker-label">讨论嘉宾</div><div class="people-list"><div class="person"><strong>邓凯</strong><span>智元创新香港公司联席总经理、海外公共政策负责人</span></div><div class="person"><strong>郑叶青</strong><span>小鹏集团副总裁、总法律顾问</span></div><div class="person"><strong>陈涵</strong><span>宇树科技国内法务负责人</span></div><div class="person"><strong>邓立山</strong><span>Kimi 月之暗面科技合规部负责人</span></div></div></article>
 
         <article class="agenda-block"><div class="block-kicker">18:00—20:00 / Evening</div><h3>酒会及“卓越AI法律人”颁奖典礼</h3><div class="speaker-label">颁奖嘉宾</div><div class="people-list"><div class="person"><strong>王颖</strong><span>高榕资本联合创始人、运营合伙人</span></div><div class="person"><strong>何秀仪</strong><span>智观科技政策研究院荣誉教授、世界知识产权组织及香港国际仲裁中心仲裁员</span></div><div class="person"><strong>李勇毅</strong><span>强生 Johnson &amp; Johnson（中国）投资公司董事、强生医疗科技副总裁（法务）</span></div><div class="person"><strong>张岩</strong><span>盛德律师事务所（Sidley Austin）合伙人、香港诉讼业务组联席主管</span></div><div class="person"><strong>Frank Pasquale</strong><span>康奈尔法学院（Cornell Law School）教授</span></div></div><p class="muted-note">更多颁奖嘉宾将陆续公布。</p></article>
       </div>
@@ -134,11 +156,21 @@
         <article class="agenda-block"><div class="block-kicker">Session 1 / 研修主题一</div><h3>深耕商业，推动企业管理与发展</h3><div class="people-list"><div class="person"><strong>刁云芸</strong><span>腾讯集团法务副总裁</span></div><div class="person"><strong>尹云霞</strong><span>方达律师事务所合伙人</span></div></div></article>
         <article class="agenda-block"><div class="block-kicker">Session 2 / 研修主题二</div><h3>走出内卷，冲击国际诉讼市场</h3><div class="people-list"><div class="person"><strong>李洁赟</strong><span>阿里巴巴集团诉讼法务总监</span></div><div class="person"><strong>黄海峰</strong><span>众达律师事务所（Jones Day）合伙人、智观科技政策研究院荣誉教授</span></div></div></article>
         <article class="agenda-block"><div class="block-kicker">Session 3 / 研修主题三</div><h3>走出国门，协助中国企业出海</h3><div class="people-list"><div class="person"><strong>钟奇</strong><span>方达律师事务所合伙人</span></div><div class="person"><strong>曹海洋</strong><span>资深法务高管、仲裁员、法律AI专家、投资人</span></div></div></article>
-        <article class="agenda-block"><div class="block-kicker">Session 4 / 研修主题四</div><h3>AI法律创业，开创法律人的科技事业</h3><div class="people-list"><div class="person"><strong>洪祖运</strong><span>智合AI创始人、CEO</span></div><div class="person"><strong>李新德</strong><span>涌见AI创始人、CEO</span></div><div class="person"><strong>吉芸</strong><span>Alta Lex Legal AI创始人、首席产品负责人</span></div></div></article>
+        <article class="agenda-block"><div class="block-kicker">Session 4 / 研修主题四</div><h3>AI法律创业，开创法律人的科技事业</h3><div class="people-list"><div class="person"><strong>洪祖运</strong><span>智合AI创始人、CEO</span></div><div class="person"><strong>李新德</strong><span>涌见AI创始人、CEO</span></div><div class="person"><strong>吉芸</strong><span>Alta Lex Legal AI创始人、首席产品负责人</span></div><div class="person"><strong>梅品和</strong><span>CLECSS创办人</span></div></div></article>
         <article class="agenda-block"><div class="block-kicker">Session 5 / 研修主题五</div><h3>AI合规与数据治理，法律人护航科技产业的新赛道</h3><div class="people-list"><div class="person"><strong>荣子怿</strong><span>小红书数据合规法务经理</span></div><div class="person"><strong>吴涵</strong><span>金杜律师事务所合伙人</span></div></div></article>
-        <article class="agenda-block"><div class="block-kicker">Session 6 / 研修主题六</div><h3>具身智能，拓展机器人时代的法律职业新天地</h3><div class="people-list"><div class="person"><strong>邓凯</strong><span>智元机器人香港公司总经理、海外公共事务负责人</span></div></div></article>
+        <article class="agenda-block"><div class="block-kicker">Session 6 / 研修主题六</div><h3>具身智能，拓展机器人时代的法律职业新天地</h3><div class="people-list"><div class="person"><strong>邓凯</strong><span>智元创新香港公司联席总经理、海外公共政策负责人</span></div></div></article>
         <article class="agenda-block"><div class="block-kicker">Session 7 / 研修主题七</div><h3>法律工程师，引领AI时代法律职业的新边界</h3><div class="people-list"><div class="person"><strong>韩斯睿</strong><span>香港科技大学跨学科学院助理教授、香港生成式人工智能研发中心大模型部主任</span></div></div></article>
         <article class="agenda-block"><div class="block-kicker">Special Guests / 特邀嘉宾</div><h3>特邀嘉宾</h3><div class="people-list"><div class="person"><strong>吴少卿</strong><span>DeepSeek 深度求索法务总监</span></div><div class="person"><strong>李勇毅</strong><span>强生 Johnson &amp; Johnson（中国）投资公司董事、强生医疗科技副总裁（法务）</span></div><div class="person"><strong>Frank Pasquale</strong><span>康奈尔法学院（Cornell Law School）教授</span></div></div><p class="muted-note">更多特邀嘉宾将陆续公布。</p></article>
+      </div>
+    </section>
+    <section class="poster-section" aria-label="完整活动海报">
+      <div class="container">
+        <h2>活动海报</h2>
+        <p>完整图文版议程。点击海报可查看原始尺寸。</p>
+        <figure>
+          <a href="assets/summit-poster-1012.png" target="_blank" rel="noopener" aria-label="以原始尺寸查看峰会海报"><img src="assets/summit-poster-1012.png" width="2400" height="14285" loading="lazy" alt="智观·港大AI法律峰会2026年12月5日至6日完整活动海报" /></a>
+          <figcaption>海报以原始比例展示</figcaption>
+        </figure>
       </div>
     </section>
   </main>
